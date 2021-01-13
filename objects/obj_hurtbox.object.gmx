@@ -8,6 +8,35 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
+    <event eventtype="0" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>enum fstates {
+    startup,
+    active,
+    recovery,
+    hit
+}
+state = fstates.startup;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="3" enumb="2">
       <action>
         <libid>1</libid>
@@ -28,6 +57,14 @@
             <string>image_speed = owner.image_speed;
 x = owner.x;
 y = owner.y;
+
+if state == fstates.startup and
+image_index &gt; startupF {
+    state = fstates.active;
+} else if state == fstates.active and
+image_index &gt; image_index+activeF {
+    state = fstates.recovery;
+}
 </string>
           </argument>
         </arguments>
@@ -67,6 +104,7 @@ y = owner.y;
           <argument>
             <kind>1</kind>
             <string>draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, image_angle, image_blend, 0.5);
+draw_text(x,y-16, string(state));
 </string>
           </argument>
         </arguments>
