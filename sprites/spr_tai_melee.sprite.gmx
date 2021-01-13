@@ -7,8 +7,8 @@
   <coltolerance>0</coltolerance>
   <sepmasks>0</sepmasks>
   <bboxmode>0</bboxmode>
-  <bbox_left>38</bbox_left>
-  <bbox_right>71</bbox_right>
+  <bbox_left>30</bbox_left>
+  <bbox_right>72</bbox_right>
   <bbox_top>32</bbox_top>
   <bbox_bottom>67</bbox_bottom>
   <HTile>0</HTile>
@@ -23,5 +23,9 @@
     <frame index="0">images\spr_tai_melee_0.png</frame>
     <frame index="1">images\spr_tai_melee_1.png</frame>
     <frame index="2">images\spr_tai_melee_2.png</frame>
+    <frame index="3">images\spr_tai_melee_3.png</frame>
+    <frame index="4">images\spr_tai_melee_4.png</frame>
+    <frame index="5">images\spr_tai_melee_5.png</frame>
+    <frame index="6">images\spr_tai_melee_6.png</frame>
   </frames>
 </sprite>

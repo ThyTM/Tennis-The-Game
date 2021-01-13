@@ -59,10 +59,10 @@ x = owner.x;
 y = owner.y;
 
 if state == fstates.startup and
-image_index &gt; startupF {
+image_index+1 &gt; startupF {
     state = fstates.active;
 } else if state == fstates.active and
-image_index &gt; image_index+activeF {
+image_index+1 &gt; image_index+activeF {
     state = fstates.recovery;
 }
 </string>

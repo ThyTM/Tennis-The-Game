@@ -231,10 +231,11 @@ var v = -keyboard_check(global.p1_moveU) + keyboard_check(global.p1_moveD);
 if keyboard_check_pressed(global.p1_melee)
 and state == states.idle and onGround {
     state = states.attack;
-    if h==0 &amp;&amp; v==0 { //5A
+    if h==0 &amp;&amp; v==0 { //0A
         sprite_index = sprites.melee;
-        image_speed = 0.2;
-        add_hurtbox(spr_fd_tai_melee, 0, 2, 1, self);
+        image_index = 0;
+        image_speed = 0.6;
+        add_hurtbox(spr_fd_tai_melee, 2, 4, 1, self);
     }
 }
 </string>
