@@ -13,7 +13,9 @@
         <sprite>sprites\spr_tai_jump</sprite>
         <sprite>sprites\spr_tai_melee</sprite>
         <sprite>sprites\spr_tai_mask</sprite>
-        <sprite>sprites\spr_taiH_melee</sprite>
+        <sprites name="Frame Data">
+          <sprite>sprites\spr_fd_tai_melee</sprite>
+        </sprites>
       </sprites>
     </sprites>
     <sprites name="Pallete">
@@ -48,7 +50,6 @@
     <shader type="GLSLES">shaders\shd_pallete.shader</shader>
   </shaders>
   <objects name="objects">
-    <object>objects\obj_player</object>
     <objects name="System">
       <object>objects\global_controller</object>
       <object>objects\global_init</object>
@@ -60,6 +61,10 @@
       <objects name="Debug">
         <object>objects\obj_control_hud</object>
       </objects>
+    </objects>
+    <objects name="Player">
+      <object>objects\obj_player</object>
+      <object>objects\obj_hurtbox</object>
     </objects>
   </objects>
   <rooms name="rooms">

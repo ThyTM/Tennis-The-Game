@@ -233,8 +233,8 @@ and state == states.idle and onGround {
     state = states.attack;
     if h==0 &amp;&amp; v==0 { //5A
         sprite_index = sprites.melee;
-        image_speed = 0.3;
-        add_hurtbox(spr_taiH_melee, 2, 3, 2);
+        image_speed = 0.2;
+        add_hurtbox(spr_fd_tai_melee, 0, 2, 1, 1, self);
     }
 }
 </string>
