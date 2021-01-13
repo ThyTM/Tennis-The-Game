@@ -20,6 +20,6 @@
   <width>54</width>
   <height>54</height>
   <frames>
-    <frame index="0">images\sprite12_0.png</frame>
+    <frame index="0">images\spr_HUD_ball_0.png</frame>
   </frames>
 </sprite>

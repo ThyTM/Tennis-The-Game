@@ -31,7 +31,7 @@
         <sprite>sprites\spr_debugb_attk2</sprite>
         <sprite>sprites\spr_debugb_attk3</sprite>
       </sprites>
-      <sprite>sprites\sprite12</sprite>
+      <sprite>sprites\spr_HUD_ball</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background"/>
