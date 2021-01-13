@@ -39,6 +39,9 @@
     <scripts name="Init">
       <script>scripts\script0.gml</script>
     </scripts>
+    <scripts name="Player">
+      <script>scripts\add_hurtbox.gml</script>
+    </scripts>
   </scripts>
   <shaders name="shaders">
     <shader type="GLSLES">shaders\shd_pallete.shader</shader>
