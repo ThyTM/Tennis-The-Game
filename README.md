@@ -8,11 +8,11 @@ dashing and etc.
 It uses 2 buttons: a melee and a special action key.
 
 The current planned characters are:
-Tai
-Nitori Kawashiro
-Sakuya Izayoi
-Akuma
+Tai,
+Nitori Kawashiro,
+Sakuya Izayoi,
+Akuma.
 
 The developers:
-Tai - The programmer
-Mawosic - The spriter
+Tai - The programmer,
+Mawosic - The spriter.
