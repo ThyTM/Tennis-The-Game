@@ -38,6 +38,10 @@
     <sprites name="DEBUG">
       <sprite>sprites\spr_debug_dummy</sprite>
       <sprite>sprites\spr_debug_dummyHurt</sprite>
+      <sprite>sprites\spr_debug_dummyHead</sprite>
+    </sprites>
+    <sprites name="Objects">
+      <sprite>sprites\spr_tennis_the_ball</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background"/>
@@ -72,6 +76,9 @@
     </objects>
     <objects name="DEBUG">
       <object>objects\obj_debug_dummy</object>
+    </objects>
+    <objects name="Objects">
+      <object>objects\obj_tennis_ball</object>
     </objects>
   </objects>
   <rooms name="rooms">

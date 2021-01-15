@@ -8,9 +8,9 @@
   <sepmasks>0</sepmasks>
   <bboxmode>0</bboxmode>
   <bbox_left>40</bbox_left>
-  <bbox_right>63</bbox_right>
-  <bbox_top>27</bbox_top>
-  <bbox_bottom>74</bbox_bottom>
+  <bbox_right>68</bbox_right>
+  <bbox_top>19</bbox_top>
+  <bbox_bottom>44</bbox_bottom>
   <HTile>0</HTile>
   <VTile>0</VTile>
   <TextureGroups>
@@ -20,6 +20,6 @@
   <width>105</width>
   <height>85</height>
   <frames>
-    <frame index="0">images\spr_debug_dummy_0.png</frame>
+    <frame index="0">images\spr_debug_dummyHead_0.png</frame>
   </frames>
 </sprite>
