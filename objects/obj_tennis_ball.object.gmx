@@ -25,13 +25,43 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>enum modifiers {
+            <string>///Important Variables
+enum modifiers {
     none,
     net,
     special
 }
+enum sides {
+    left  = -1,
+    right =  1,
+    null  =  0
+}
 modifier = modifiers.none;
+side = sides.null;
 hspeed = 0.2;
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Miscallenous
+hitstun = 0;
 </string>
           </argument>
         </arguments>
@@ -56,6 +86,35 @@ hspeed = 0.2;
             <kind>1</kind>
             <string>gravity_direction = 270;
 gravity = 0.5;
+if hitstun &gt; 0 hitstun -= 1;
+instance_create(x,y,obj_particle_trace);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_debug_dummy">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if hitstun &gt; 0 exit;
+hspeed = -5;
+vspeed = -7;
+hitstun += 3;
+//instance_create(x,y,obj_particle_pow);
 </string>
           </argument>
         </arguments>
@@ -78,8 +137,11 @@ gravity = 0.5;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>hspeed = 5;
+            <string>if hitstun &gt; 0 exit;
+hspeed = 5;
 vspeed = -7;
+hitstun += 3;
+//instance_create(x,y,obj_particle_pow);
 </string>
           </argument>
         </arguments>
@@ -103,7 +165,10 @@ vspeed = -7;
           <argument>
             <kind>1</kind>
             <string>move_contact_solid(direction,speed);
-vspeed = -7;
+y-=1;
+instance_create(x,y+2,obj_particle_balldrop);
+with other instance_create(x,y,obj_particle_ballhit);
+vspeed = -8;
 </string>
           </argument>
         </arguments>
@@ -123,6 +188,29 @@ vspeed = -7;
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>draw_self();
+</string>
+          </argument>
+        </arguments>
       </action>
     </event>
   </events>

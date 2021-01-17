@@ -37,11 +37,24 @@
     </sprites>
     <sprites name="DEBUG">
       <sprite>sprites\spr_debug_dummy</sprite>
+      <sprite>sprites\sprite26</sprite>
       <sprite>sprites\spr_debug_dummyHurt</sprite>
       <sprite>sprites\spr_debug_dummyHead</sprite>
     </sprites>
     <sprites name="Objects">
       <sprite>sprites\spr_tennis_the_ball</sprite>
+    </sprites>
+    <sprites name="Particles">
+      <sprites name="Ball">
+        <sprite>sprites\spr_particle_balldrop</sprite>
+        <sprite>sprites\spr_particle_ballhit</sprite>
+        <sprite>sprites\spr_particle_purple</sprite>
+        <sprite>sprites\spr_particle_trace</sprite>
+        <sprite>sprites\spr_particle_tmark</sprite>
+      </sprites>
+      <sprites name="Letters">
+        <sprite>sprites\spr_particle_pow</sprite>
+      </sprites>
     </sprites>
   </sprites>
   <backgrounds name="background"/>
@@ -79,6 +92,16 @@
     </objects>
     <objects name="Objects">
       <object>objects\obj_tennis_ball</object>
+    </objects>
+    <objects name="Particles">
+      <objects name="Ball">
+        <object>objects\obj_particle_balldrop</object>
+        <object>objects\obj_particle_ballhit</object>
+        <object>objects\obj_particle_trace</object>
+      </objects>
+      <objects name="Letters">
+        <object>objects\obj_particle_pow</object>
+      </objects>
     </objects>
   </objects>
   <rooms name="rooms">
