@@ -11,7 +11,11 @@ The current planned characters are:
 Tai,
 Nitori Kawashiro,
 Sakuya Izayoi,
-Akuma.
+Akuma,
+Village People,
+Panty,
+Stocking,
+Smoke Bagger.
 
 The developers:
 Tai - The programmer,
