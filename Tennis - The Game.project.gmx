@@ -48,7 +48,7 @@
       <sprites name="Ball">
         <sprite>sprites\spr_particle_balldrop</sprite>
         <sprite>sprites\spr_particle_ballhit</sprite>
-        <sprite>sprites\spr_particle_purple</sprite>
+        <sprite>sprites\spr_particle_hit</sprite>
         <sprite>sprites\spr_particle_trace</sprite>
         <sprite>sprites\spr_particle_tmark</sprite>
       </sprites>
@@ -98,6 +98,7 @@
         <object>objects\obj_particle_balldrop</object>
         <object>objects\obj_particle_ballhit</object>
         <object>objects\obj_particle_trace</object>
+        <object>objects\obj_particle_hit</object>
       </objects>
       <objects name="Letters">
         <object>objects\obj_particle_pow</object>

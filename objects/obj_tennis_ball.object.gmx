@@ -93,33 +93,6 @@ instance_create(x,y,obj_particle_trace);
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="obj_debug_dummy">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>if hitstun &gt; 0 exit;
-hspeed = -5;
-vspeed = -7;
-hitstun += 3;
-//instance_create(x,y,obj_particle_pow);
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
     <event eventtype="4" ename="obj_hurtbox">
       <action>
         <libid>1</libid>
@@ -138,10 +111,11 @@ hitstun += 3;
           <argument>
             <kind>1</kind>
             <string>if hitstun &gt; 0 exit;
-hspeed = 5;
+hspeed = 5*(other.image_xscale);
 vspeed = -7;
 hitstun += 3;
 //instance_create(x,y,obj_particle_pow);
+repeat(15) {instance_create(x,y,obj_particle_hit)};
 </string>
           </argument>
         </arguments>
