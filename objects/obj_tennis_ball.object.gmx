@@ -111,11 +111,11 @@ instance_create(x,y,obj_particle_trace);
           <argument>
             <kind>1</kind>
             <string>if hitstun &gt; 0 exit;
-hspeed = 5*(other.image_xscale);
+hspeed = 3*(other.image_xscale);
 vspeed = -7;
 hitstun += 3;
-//instance_create(x,y,obj_particle_pow);
-repeat(15) {instance_create(x,y,obj_particle_hit)};
+repeat(12) {instance_create(x,y,obj_particle_hit)};
+instance_create(x,y,obj_particle_hits);
 </string>
           </argument>
         </arguments>

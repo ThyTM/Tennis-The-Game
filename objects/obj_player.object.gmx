@@ -224,12 +224,24 @@ and keyboard_check_pressed(global.p1_moveU) {
           <argument>
             <kind>1</kind>
             <string>///Attack System
-var h = -keyboard_check(global.p1_moveL) + keyboard_check(global.p1_moveR);
+var h = -keyboard_check(global.p1_moveL) + keyboard_check(global.p1_moveR)*image_xscale;
 var v = -keyboard_check(global.p1_moveU) + keyboard_check(global.p1_moveD);
 
 //Ground attacks
 if keyboard_check_pressed(global.p1_melee)
 and state == states.idle and onGround {
+    state = states.attack;
+    if h==0 &amp;&amp; v==0 { //0A
+        sprite_index = sprites.melee;
+        image_index = 0;
+        image_speed = 0.6;
+        add_hurtbox(spr_fd_tai_melee, 2, 4, 1, self, noone);
+    }
+}
+
+//Air attacks
+if keyboard_check_pressed(global.p1_melee)
+and state == states.idle and !onGround {
     state = states.attack;
     if h==0 &amp;&amp; v==0 { //0A
         sprite_index = sprites.melee;
@@ -312,10 +324,35 @@ if sprite_index == sprites.melee {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_self();
+            <string>pal_swap_set(spr_tai_pallete, color, false);
+draw_self();
+pal_swap_reset();
 
 //Hitbox
-draw_sprite_ext(mask_index, 0, x, y, image_xscale, image_yscale, image_angle, image_blend, image_alpha/2);
+//draw_sprite_ext(mask_index, 0, x, y, image_xscale, image_yscale, image_angle, image_blend, image_alpha/2);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="68">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>color += 1;
 </string>
           </argument>
         </arguments>
@@ -340,6 +377,29 @@ draw_sprite_ext(mask_index, 0, x, y, image_xscale, image_yscale, image_angle, im
             <kind>1</kind>
             <string>state = states.idle;
 sprite_index = sprites.idle;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="65">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>color -= 1;
 </string>
           </argument>
         </arguments>

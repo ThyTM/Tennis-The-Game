@@ -49,6 +49,7 @@
         <sprite>sprites\spr_particle_balldrop</sprite>
         <sprite>sprites\spr_particle_ballhit</sprite>
         <sprite>sprites\spr_particle_hit</sprite>
+        <sprite>sprites\spr_particle_hits</sprite>
         <sprite>sprites\spr_particle_trace</sprite>
         <sprite>sprites\spr_particle_tmark</sprite>
       </sprites>
@@ -66,9 +67,18 @@
     <scripts name="Player">
       <script>scripts\add_hurtbox.gml</script>
     </scripts>
+    <scripts name="Pallete">
+      <script>scripts\pal_swap_draw_palette.gml</script>
+      <script>scripts\pal_swap_get_color_count.gml</script>
+      <script>scripts\pal_swap_get_pal_count.gml</script>
+      <script>scripts\pal_swap_reset.gml</script>
+      <script>scripts\pal_swap_set.gml</script>
+      <script>scripts\pal_swap_set_depth.gml</script>
+      <script>scripts\pal_swap_init_system.gml</script>
+    </scripts>
   </scripts>
   <shaders name="shaders">
-    <shader type="GLSLES">shaders\shd_pallete.shader</shader>
+    <shader type="GLSLES">shaders\shd_pal_swapper.shader</shader>
   </shaders>
   <objects name="objects">
     <objects name="System">
@@ -99,6 +109,7 @@
         <object>objects\obj_particle_ballhit</object>
         <object>objects\obj_particle_trace</object>
         <object>objects\obj_particle_hit</object>
+        <object>objects\obj_particle_hits</object>
       </objects>
       <objects name="Letters">
         <object>objects\obj_particle_pow</object>
